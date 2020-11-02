@@ -1,0 +1,218 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3879cd56-1db0-4164-8507-571b0ada6944" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cubo_Denuncia</ID>
+  <Name>Cubo_Denuncia</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="ef558ca1-17fc-4a78-b988-c22476c4cc61">
+      <ID>Dim Siniestro</ID>
+      <Name>Dim Siniestro</Name>
+      <DimensionID>Dim Siniestro</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="43cd8343-cfee-4e68-b7ef-4152d1d9fe1c">
+          <AttributeID>Id Siniestro</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e778a424-903b-44bc-b76d-1f24e40aec40">
+      <ID>Dim Cliente</ID>
+      <Name>Dim Cliente</Name>
+      <DimensionID>Dim Cliente</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ab848753-0efe-4033-bb41-55bab42bbcdb">
+          <AttributeID>Id Cliente</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e0372c26-fd66-4a32-93e9-554b47477c70">
+      <ID>Dim Poliza</ID>
+      <Name>Dim Poliza</Name>
+      <DimensionID>Dim Poliza</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f6cb1187-1f13-4261-b671-44655f19ec04">
+          <AttributeID>Id Poliza</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="b8d4ab6d-0b2d-49be-aead-396c843e03bc">
+      <ID>Fact Denuncia</ID>
+      <Name>Fact Denuncia</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="6db64db7-0ce4-40a8-b163-0a3a61764507">
+          <ID>Cant Pol Siniestro</ID>
+          <Name>Cant Pol Siniestro</Name>
+          <Source dwd:design-time-name="6ab8a5a4-62c6-4608-9ecd-9a4ac4bebc44">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e09beb49-ef82-4a42-8065-a55e1fbd0dbb">
+              <TableID>dbo_Fact_Denuncia</TableID>
+              <ColumnID>cant_pol_siniestro</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="704c84be-5f3b-4c9a-b978-09adeb706e31">
+          <ID>Monto Tipo Siniestro</ID>
+          <Name>Monto Tipo Siniestro</Name>
+          <Source dwd:design-time-name="54eebaa7-3474-4b4b-a51e-d542e9ed7f2d">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="166ea47d-432c-4ff5-9d1f-55c0dc8b0892">
+              <TableID>dbo_Fact_Denuncia</TableID>
+              <ColumnID>monto_tipo_siniestro</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a46d6e78-cc8e-4eee-bf6a-825c3529ae32">
+          <ID>Cant Genero</ID>
+          <Name>Cant Genero</Name>
+          <Source dwd:design-time-name="be2f9aad-bfc4-4cff-99ac-5e5207f3e6be">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="71cab1bb-817b-49df-90fc-26dba96b67c5">
+              <TableID>dbo_Fact_Denuncia</TableID>
+              <ColumnID>cant_genero</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="57a70080-357e-442e-b446-3b4c867018a6">
+          <ID>Cant Edad</ID>
+          <Name>Cant Edad</Name>
+          <Source dwd:design-time-name="6f127d3f-e4cf-48f2-ada3-1ca80183181a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="42b7804e-ef1f-4c16-866c-5399722d55d0">
+              <TableID>dbo_Fact_Denuncia</TableID>
+              <ColumnID>cant_edad</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3c99dc59-2cf5-4523-9507-8e947c87c109">
+          <ID>Cant Estudio</ID>
+          <Name>Cant Estudio</Name>
+          <Source dwd:design-time-name="28872284-5019-4f85-9920-5331b6a03564">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b64db357-0c78-4df6-b1c3-9deacf185702">
+              <TableID>dbo_Fact_Denuncia</TableID>
+              <ColumnID>cant_estudio</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="08e7e5ca-dbaa-4622-8ad2-f92a4fa5f047">
+          <ID>Recuento Fact Denuncia</ID>
+          <Name>Recuento Fact Denuncia</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2a818505-72fd-4291-8ac5-3cf83b82e7bf">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5f9bfdd3-29a5-498b-a5de-8f88dfb1a801">
+              <TableID>dbo_Fact_Denuncia</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fdeb015d-8bf7-4670-b1dd-26520b7973f9">
+          <CubeDimensionID>Dim Siniestro</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9d9affd1-51f1-42a1-ab7b-c1872294170d">
+              <AttributeID>Id Siniestro</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f9f49cc3-d44f-4039-b8ee-5ab4b2ad9c55">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="24d2b4a8-66f3-4fcb-8056-34de40cb7d2f">
+                    <TableID>dbo_Fact_Denuncia</TableID>
+                    <ColumnID>id_siniestro</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a4354b2a-9f37-47c4-a66a-af780ca0e254">
+          <CubeDimensionID>Dim Cliente</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0a5220e8-ae16-4bf4-9512-89e87d1ff828">
+              <AttributeID>Id Cliente</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e356832d-fdf3-4f06-b47a-9a5d737dfd00">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5c821dc3-f426-4b23-9871-d7c98b816c69">
+                    <TableID>dbo_Fact_Denuncia</TableID>
+                    <ColumnID>id_cliente</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0eda4af8-b3eb-4d3b-94a6-7838a3dff82a">
+          <CubeDimensionID>Dim Poliza</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="adccbba3-4879-4739-bbe8-ed20bf9a6c8c">
+              <AttributeID>Id Poliza</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b43eef02-a4ee-4495-8c9b-c3f6af4d3ba5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="392d85f9-0d47-423a-96ba-4ac296494872">
+                    <TableID>dbo_Fact_Denuncia</TableID>
+                    <ColumnID>id_poliza</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="05953153-312b-4ccc-9d61-9c2849f75508">
+    <DataSourceViewID>Vista DW Seguro Total</DataSourceViewID>
+  </Source>
+</Cube>

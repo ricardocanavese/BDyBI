@@ -1,0 +1,174 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5e1b5b39-a781-4639-8982-a8581e8dd885" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cubo_Productividad</ID>
+  <Name>Cubo_Productividad</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="8d57e96a-cd54-4e80-b8c1-013fc5130a1f">
+      <ID>Dim Tiempo</ID>
+      <Name>Dim Tiempo</Name>
+      <DimensionID>Dim Tiempo</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="65e72b74-aa5d-4eda-b601-3931415130c1">
+          <AttributeID>Id Tiempo</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0e41e6f8-1c8e-4573-ba8f-97dc0e9d0300">
+      <ID>Dim Poliza</ID>
+      <Name>Dim Poliza</Name>
+      <DimensionID>Dim Poliza</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9adfe57d-3d2a-445c-91a3-12072c36ff9c">
+          <AttributeID>Id Poliza</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1862acdd-7c54-4f1a-8e98-907c18b894f9">
+      <ID>Dim Productor</ID>
+      <Name>Dim Productor</Name>
+      <DimensionID>Dim Productor</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e7b8df39-75f8-41e5-be1c-22a1eddcb417">
+          <AttributeID>Id Productor</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="77cf0d7b-768c-46a0-b468-881229d489c4">
+      <ID>Fact Productividad</ID>
+      <Name>Fact Productividad</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="640c4a56-60d2-40e0-8b71-29c4a9069aef">
+          <ID>Cant Pol</ID>
+          <Name>Cant Pol</Name>
+          <Source dwd:design-time-name="b2101e72-6e67-4196-83db-c489629729b7">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0acdcd33-11d4-48f3-bbbd-b643ac25350a">
+              <TableID>dbo_Fact_Productividad</TableID>
+              <ColumnID>cant_pol</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="76e5aff4-dba7-43bf-9277-ffb12742802f">
+          <ID>Recuento Fact Productividad</ID>
+          <Name>Recuento Fact Productividad</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b2bdd764-f419-4767-bf08-5611e6314a4b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="69378583-820d-45f2-94f8-93762bec8bb9">
+              <TableID>dbo_Fact_Productividad</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c11878a3-b775-4d2c-a31b-c941afb97eac">
+          <CubeDimensionID>Dim Tiempo</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7250089e-dfc0-4ac6-9c7f-dca470376d28">
+              <AttributeID>Id Tiempo</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="15740720-b2db-4c02-9b72-9e2bc62d1411">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7136f946-cc11-418f-865a-324f590e76a3">
+                    <TableID>dbo_Fact_Productividad</TableID>
+                    <ColumnID>id_tiempo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a474ebb0-b918-4bfe-99dd-1c50cf011fab">
+          <CubeDimensionID>Dim Poliza</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="11438ce2-0e19-4b72-bcd9-7667f113bf21">
+              <AttributeID>Id Poliza</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7f208b36-8846-4cc3-943b-e22f495edc99">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0e521476-3e72-413c-bcdb-d2691a946f4c">
+                    <TableID>dbo_Fact_Productividad</TableID>
+                    <ColumnID>id_poliza</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d5e252bd-f845-4eff-a78e-c028275143bc">
+          <CubeDimensionID>Dim Productor</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c35e2955-3841-48c6-8e1d-5dc616e64fcd">
+              <AttributeID>Id Productor</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7a5ccfe4-613e-4aad-adc9-c4af78e810ca">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="827794f2-5a2c-4575-a2c9-2b46e73ffea6">
+                    <TableID>dbo_Fact_Productividad</TableID>
+                    <ColumnID>id_productor</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="c927ec93-b60e-456d-bb63-0a97dca4ab28">
+    <DataSourceViewID>Vista DW Seguro Total</DataSourceViewID>
+  </Source>
+</Cube>
